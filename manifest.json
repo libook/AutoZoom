@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Auto Zoom",
+  "description": "Automatic zoom into the main content of a page.",
+  "version": "1.0",
+  "icons": {"48": "icon.png"},
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["pageAgent.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "*://*/*"
+  ]
+}
