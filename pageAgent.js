@@ -34,14 +34,12 @@
         }
     } while (true);
 
-    // There must be something wrong if proportion is bigger than 2.
-    if (proportion > 2) {
-        proportion = 1;
+    // There must be something wrong if proportion is too big or too small.
+    if ((proportion < 2) && (proportion > 1)) {
+        // Send message to background.
+        chrome.runtime.sendMessage('goohcjifomjepeioeicmjdilbdbcjjak', proportion, function () {
+            // Make sure that I can see the whole element.
+            biggestNode.scrollIntoView(true);
+        });
     }
-
-    // Send message to background.
-    chrome.runtime.sendMessage('goohcjifomjepeioeicmjdilbdbcjjak', proportion, function () {
-        // Make sure that I can see the whole element.
-        biggestNode.scrollIntoView(true);
-    });
 })();
