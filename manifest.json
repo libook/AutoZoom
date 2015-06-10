@@ -3,14 +3,21 @@
   "name": "Auto Zoom",
   "description": "Automatic zoom into the main content of a page.",
   "version": "1.0",
-  "icons": {"48": "icon.png"},
+  "icons": {
+    "48": "icon_48.png",
+    "128": "icon_128.png"
+  },
   "background": {
     "page": "background.html"
   },
   "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["pageAgent.js"],
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "pageAgent.js"
+      ],
       "run_at": "document_end"
     }
   ],
