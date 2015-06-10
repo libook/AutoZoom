@@ -1,6 +1,6 @@
 #Auto Zoom#
 
-**This is a chrome extension.**
+**[This is a chrome extension.](https://chrome.google.com/webstore/detail/auto-zoom/eiafhhcnnjnnigicgpfpabacnphimbdi?utm_source=chrome-app-launcher-info-dialog)**
 
 Every WEB page has it's layout.
 
