@@ -37,7 +37,7 @@
     // There must be something wrong if proportion is too big or too small.
     if ((proportion < 2) && (proportion > 1)) {
         // Send message to background.
-        chrome.runtime.sendMessage('goohcjifomjepeioeicmjdilbdbcjjak', proportion, function () {
+        chrome.runtime.sendMessage('eiafhhcnnjnnigicgpfpabacnphimbdi', proportion, function () {
             // Make sure that I can see the whole element.
             biggestNode.scrollIntoView(true);
         });
