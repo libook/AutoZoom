@@ -3,6 +3,7 @@
     var nodes = document.body.children;
     var biggestNode;
     var proportion = 1;
+    var inputBox = document.querySelector('input[type="text"]');
 
     // Find the main element I want to see. And find out the proportion for zooming.
     do {
@@ -38,8 +39,13 @@
     if ((proportion < 2) && (proportion > 1)) {
         // Send message to background.
         chrome.runtime.sendMessage('eiafhhcnnjnnigicgpfpabacnphimbdi', proportion, function () {
-            // Make sure that I can see the whole element.
-            biggestNode.scrollIntoView(true);
+            if (inputBox === null) {
+                // Make sure that I can see the whole element.
+                biggestNode.scrollIntoView(true);
+            } else {
+                // Show the input box (maybe it is a search box).
+                inputBox.scrollIntoView(true);
+            }
         });
     }
 })();
